@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h4 class="text-center">Catégories</h4>
+  
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor= "let cat of categorie">
+                <td>{{cat.id}}</td>
+                <td>{{cat.nom}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+</div>

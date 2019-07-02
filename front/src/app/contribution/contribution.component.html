@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-10">
+          <h4>Ton apport peut tout changer, écrivons cette page ensemble !
+              <img src="assets/images/nouveauprojet.jpg">
+            </h4> 
+        
+        <h4> Montant de la contribution: </h4>
+      
+         <form>
+            
+            
+            <div class="form-group">
+              <label for="contribution">Contribution : </label>
+              <input #montantContribution type="number" id="contribution"/>
+              <button (click)="saveMontantCont(montantContribution.value)" class="btn btn-primary"><span class="glyphicon glyphicon-remove-circle"></span> Contribuer</button>
+            </div>
+      
+            
+              
+            
+  
+  
+          </form>
+      </div>
+    </div>
+  </div>

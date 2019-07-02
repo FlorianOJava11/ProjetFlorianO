@@ -1,0 +1,35 @@
+<div class="container">
+    <h4>Projet ID : {{ProjetId}}</h4>
+  
+    <div *ngIf="projet">  
+      <form [formGroup]="projetEditForm" (ngSubmit)="updateProjet()">
+  
+        <div class="form-group">
+          <label for="titre">Titre</label>
+          <input formControlName="titre" class="form-control" id="titre"/>
+        </div>
+        <div class="form-group">
+            <label for="montantMinimum">Montant Minimum</label>
+            <input formControlName="montantMinimum" class="form-control" id="montantMinimum"/>
+          </div>
+          <div class="form-group">
+              <label for="categorie">Categorie</label>
+              <select formControlName="categorie" id="categorie">
+                <option  *ngFor="let cat of categorie" [ngValue] = "cat">{{cat.nom}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact">Contact</label>
+              <input formControlName="contact"  id="contact"/>
+            </div>
+            <div class="form-group">
+                <label for="contribution">Contribution : </label>
+                <select formControlName="contributions" id="contribution">
+                    <option  *ngFor="let cont of contribution" [ngValue] = "cont">{{cont.type}}</option>
+                  </select> 
+            </div>
+          <button class="btn btn-primary">Modifier</button>
+      </form>
+    </div>
+  
+  </div>

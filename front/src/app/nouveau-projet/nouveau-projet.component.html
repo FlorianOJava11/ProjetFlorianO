@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+        <h4>On croit en toi et ton projet:
+             Tu vas tout déchirer !!
+            <img src="assets/images/President.jpg">
+          </h4> 
+      
+      <h4> Quelques détails sur ton projet novateur:</h4>
+    
+       <form [formGroup] = "projetForm" (ngSubmit) ="saveProjet()">
+          <div class="form-group">
+            <label for="titre">Titre</label>
+            <input formControlName="titre" type="text" id="titre"/>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input formControlName="description" type="text" id="description"/>
+          </div>
+          <div class="form-group">
+            <label for="montantMinimum"> Montant Minimum</label>
+            <input formControlName="montantMinimum" type="number" id="montantMinimum"/>
+          </div>
+          <div class="form-group">
+            <label for="categorie">Categorie</label>
+            <select formControlName="categorie" id="categorie">
+              <option  *ngFor="let cat of categorie" [ngValue] = "cat">{{cat.nom}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact</label>
+            <input formControlName="contact" type="text" id="contact"/>
+          </div>
+          <div class="form-group">
+            <label for="contribution">Contribution : </label>
+            <select formControlName="contributions" id="contribution">
+                <option  *ngFor="let cont of contribution" [ngValue] = "cont">{{cont.type}}</option>
+              </select> 
+          </div>
+          <button class="btn btn-primary">Save</button>
+          
+            
+          
+
+
+        </form>
+    </div>
+  </div>
+</div>
